@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".data.fragment.add.addFragment"
+    android:background="@drawable/login_background">
 
 
     <RelativeLayout
@@ -11,41 +12,72 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center">
         <EditText
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
             android:id="@+id/UpdateFirstName"
             android:hint="Enter the First Name"
 
+            android:padding="10sp"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-
+            android:inputType="textPersonName"
+            android:paddingStart="10sp"
+            android:background="@drawable/login_edit_background"
             />
 
         <EditText
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
             android:id="@+id/UpdateLastName"
+            android:padding="10sp"
             android:hint="Enter the Last Name"
             android:layout_below="@id/UpdateFirstName"
 
+            android:paddingStart="10sp"
+            android:background="@drawable/login_edit_background"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <EditText
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
             android:id="@+id/UpdatePersonAge"
             android:hint="Enter the Age"
+            android:padding="10sp"
             android:layout_below="@id/UpdateLastName"
 
+            android:paddingStart="10sp"
+            android:background="@drawable/login_edit_background"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <Button
             android:id="@+id/Update_add_button"
-            android:layout_marginLeft="80sp"
+            android:layout_marginLeft="150sp"
             android:layout_below="@id/UpdatePersonAge"
 
             android:layout_marginRight="80sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Update" />
+            android:gravity="center"
+
+            android:padding="10sp"
+            android:text="Update"
+
+            android:layout_marginTop="10sp"
+            android:textColorHint="@color/black"
+            android:background="@drawable/button_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </RelativeLayout>
 </LinearLayout>

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 
-class login : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
 
     var Username = "saksham"
@@ -27,31 +27,99 @@ class login : AppCompatActivity() {
 
         preferencesProvider = PreferencesProvider(applicationContext)
 
-        buttonRegister.setOnClickListener {
-            var username = nameEt.text.toString()
-            var pass = passwordEt.text.toString()
+        Log.e("THEVALUE",""+Constants.KEY_FIRST_NAME);
 
-            if (username == Username && pass == Password) {
-                var intent = Intent(this, MainActivity::class.java)
-                preferencesProvider.putString(Constants.KEY_FIRST_NAME,nameEt.text.toString())
-                preferencesProvider.putInt(Constants.KEY_PASS,passwordEt.text.toString().toInt())
-                nameEt.setText(preferencesProvider.getString(Constants.KEY_FIRST_NAME))
-                passwordEt.setText(preferencesProvider.getInt(Constants.KEY_PASS).toString())
-                startActivity(intent)
+        if (Constants.KEY_FIRST_NAME.toString() == "saksham") {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+//        if (preferencesProvider.getString(Constants.KEY_FIRST_NAME) == "")
+//        {
+//
+//            buttonRegister.setOnClickListener {
+//                var username = nameEt.text.toString()
+//                var pass = passwordEt.text.toString()
+//
+//                if (username == Username && pass == Password) {
+//                    var intent = Intent(this, MainActivity::class.java)
+//                    preferencesProvider.putString(Constants.KEY_FIRST_NAME, nameEt.text.toString())
+//                    preferencesProvider.putInt(
+//                        Constants.KEY_PASS,
+//                        passwordEt.text.toString().toInt()
+//                    )
+//                    nameEt.setText(preferencesProvider.getString(Constants.KEY_FIRST_NAME))
+//                    passwordEt.setText(preferencesProvider.getInt(Constants.KEY_PASS).toString())
+//                    preferencesProvider.getString(Constants.KEY_FIRST_NAME)?.let { it1 ->
+//                        Log.e(
+//                            "VALUE",
+//                            it1
+//                        )
+//                    }
+//
+//                    startActivity(intent)
+//
+//                    finish()
+//                    Toast.makeText(this, "SuccessFully Registered", Toast.LENGTH_SHORT).show()
+//                } else {
+//                    Toast.makeText(this, "Invalid Entry", Toast.LENGTH_SHORT).show()
+//                }
+//        }
+//        if (preferencesProvider.getString(Constants.KEY_FIRST_NAME) == "reset") {
+//            var intent = Intent(this, Login::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
 
-                finish()
-                Toast.makeText(this, "SuccessFully Registered", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Invalid Entry", Toast.LENGTH_SHORT).show()
-            }
+        Log.e("value","preferencesProvider.getString(Constants.KEY_FIRST_NAME)")
+        Log.e("value of et",nameEt.toString())
+
+
+//        if (Constants.KEY_FIRST_NAME == "reset") {
+//            var intent = Intent(this, login::class.java)
+//            startActivity(intent)
+//        }
+//        }
+//        else
+//        {
+//            var intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+
+           buttonRegister.setOnClickListener {
+                var username = nameEt.text.toString()
+                var pass = passwordEt.text.toString()
+
+                if (username == Username && pass == Password) {
+                    var intent = Intent(this, MainActivity::class.java)
+                    preferencesProvider.putString(Constants.KEY_FIRST_NAME, nameEt.text.toString())
+                    preferencesProvider.putInt(
+                        Constants.KEY_PASS,
+                        passwordEt.text.toString().toInt()
+                    )
+                    nameEt.setText(preferencesProvider.getString(Constants.KEY_FIRST_NAME))
+                    passwordEt.setText(preferencesProvider.getInt(Constants.KEY_PASS).toString())
+                    preferencesProvider.getString(Constants.KEY_FIRST_NAME)?.let { it1 ->
+                        Log.e(
+                            "VALUE",
+                            it1
+                        )
+                    }
+
+                    startActivity(intent)
+
+                    finish()
+                    Toast.makeText(this, "SuccessFully Registered", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Invalid Entry", Toast.LENGTH_SHORT).show()
+                }
 
 //            preferencesProvider.putString(Constants.KEY_FIRST_NAME,nameEt.text.toString())
 //            preferencesProvider.putInt(Constants.KEY_PASS,passwordEt.text.toString().toInt())
 
 
-
-
-        }
+            }
 
 //        if (Username == sharedPref.loadUserName() && Password == sharedPref.loadUserPassword())
 //        {
@@ -74,7 +142,7 @@ class login : AppCompatActivity() {
 //        }
 
 
-        //var value: String? = intent.getStringExtra("reset")
+            //var value: String? = intent.getStringExtra("reset")
 
 //        if (token?.getString("username"," ")== "reset") {
 //            var intent = Intent(this, login::class.java)
@@ -86,7 +154,7 @@ class login : AppCompatActivity() {
 //            editor?.commit()
 //        }
 
-        //       val token: SharedPreferences = getSharedPreferences(PREF_NAME, PRIVATE_MODE)
+            //       val token: SharedPreferences = getSharedPreferences(PREF_NAME, PRIVATE_MODE)
 //        if (sharedPref.getBoolean(PREF_NAME, false)) {
 //            val homeIntent = Intent(this, HomeActivity::class.java)
 //            startActivity(homeIntent)
@@ -98,7 +166,7 @@ class login : AppCompatActivity() {
 //            editor.putBoolean(PREF_NAME, true)
 //            editor.apply()
 //        }
-        Log.e("Start", "login activity started")
+            Log.e("Start", "login activity started")
 
 
 //        if (token.getBoolean()){
@@ -163,5 +231,5 @@ class login : AppCompatActivity() {
 //        passwordEt.setText(0)
 //    }
 
+        }
     }
-}

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".data.fragment.add.addFragment">
+    tools:context=".data.fragment.add.addFragment"
+    android:background="@drawable/login_background">
 
 
     <RelativeLayout
@@ -11,31 +12,53 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center">
     <EditText
+        android:drawablePadding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
         android:id="@+id/editTextPersonFirstName"
         android:hint="Enter the First Name"
+        android:padding="10sp"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:background="@drawable/login_edit_background"
+        android:textStyle="bold"
          />
 
     <EditText
+        android:drawablePadding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
         android:id="@+id/editTextPersonLastName"
         android:hint="Enter the Last Name"
         android:layout_below="@id/editTextPersonFirstName"
-
+        android:paddingStart="10sp"
+        android:padding="10sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-         />
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:background="@drawable/login_edit_background"
+        android:textStyle="bold"
+/>
 
     <EditText
+        android:drawablePadding="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
         android:id="@+id/editTextPersonAge"
         android:hint="Enter the Age"
         android:layout_below="@id/editTextPersonLastName"
 
+        android:textStyle="bold"
+        android:padding="10sp"
         android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_baseline_person_24"
         android:layout_height="wrap_content"
+        android:paddingStart="10sp"
+        android:background="@drawable/login_edit_background"
          />
 
     <Button
@@ -43,8 +66,15 @@
         android:layout_marginLeft="150sp"
         android:layout_below="@id/editTextPersonAge"
 
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="10sp"
+        android:layout_marginTop="10sp"
+        android:textColorHint="@color/black"
+        android:background="@drawable/button_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD" />
+        android:text="Add" />
     </RelativeLayout>
 </LinearLayout>

@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.roomdatabase.R
 import com.example.roomdatabase.model.User
 import com.example.roomdatabase.viewModel.UserViewModel
+import kotlinx.android.synthetic.main.custom_row.*
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
 
@@ -42,10 +43,13 @@ class addFragment : Fragment() {
         val lastName=editTextPersonLastName.text.toString()
         val age = editTextPersonAge.text
 
+
         if (inputCheck(firstName,lastName,age)){
             //user obj
             val user = User(0,firstName,lastName,Integer.parseInt(age.toString()))
 
+            val user1=User(0, "gfghj", "fggh", 344)
+            mUserViewModel.addUser(user1)
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Added Successfully", Toast.LENGTH_SHORT).show()
             //navigate Back

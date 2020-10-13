@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(findNavController(R.id.fragment))
 
-        val mSharedPreference = PreferenceManager.getDefaultSharedPreferences(
-            baseContext
-        )
-        val value = mSharedPreference.getString("loginusername", "")
-        Log.e("Value ","value of loginusername$value")
+//        val mSharedPreference = PreferenceManager.getDefaultSharedPreferences(
+//            baseContext
+//        )
+//        val value = mSharedPreference.getString("loginusername", "")
+//        Log.e("Value ","value of loginusername$value")
     }
 
     override fun onSupportNavigateUp(): Boolean {

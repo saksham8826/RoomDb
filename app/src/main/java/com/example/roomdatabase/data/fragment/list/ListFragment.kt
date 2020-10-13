@@ -1,16 +1,21 @@
 package com.example.roomdatabase.data.fragment.list
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.roomdatabase.Constants
 import com.example.roomdatabase.PreferencesProvider
 import com.example.roomdatabase.R
+import com.example.roomdatabase.Login
 import com.example.roomdatabase.viewModel.UserViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
@@ -18,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_list.view.*
 class listFragment : Fragment() {
 
     private lateinit var mUserViewModel : UserViewModel
-    private lateinit var preferencesProvider: PreferencesProvider
+    private var preferencesProvider: PreferencesProvider? =null
    // SharedPreferences preferences = getSharedPreferences("pref", Context.MODE_PRIVATE)
 
     override fun onCreateView(
@@ -28,6 +33,7 @@ class listFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_list, container, false)
 
+        Log.e("THEVALUE","IN listFragment"+Constants.KEY_FIRST_NAME);
 
         //Recyclerview
         val adapter=ListAdapter()
@@ -46,9 +52,13 @@ class listFragment : Fragment() {
         }
 
         view.reset_button.setOnClickListener {
-            preferencesProvider.clear()
+            preferencesProvider?.clear()
+            startActivity(Intent(context,Login::class.java))
+            Log.e("Value of Keyuser",Constants.KEY_FIRST_NAME)
             Toast.makeText(requireContext(), "Login Data Cleared", Toast.LENGTH_SHORT).show()
-            deleteAllUser()
+
+
+
         }
 //
 ////

@@ -1,6 +1,7 @@
 package com.example.roomdatabase
 
 import android.content.Context
+import android.util.Log
 import com.example.roomdatabase.data.fragment.list.listFragment
 
 class PreferencesProvider(context: Context) {
@@ -13,6 +14,8 @@ class PreferencesProvider(context: Context) {
 
     fun putString(Key: String,value: String){
         sharedPreferences.edit().putString(Key,value).apply()
+
+
     }
 
     fun getString(Key: String):String?{

@@ -1,6 +1,7 @@
 package com.example.roomdatabase.model
 
 import android.os.Parcelable
+import android.text.Editable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
@@ -9,8 +10,8 @@ import kotlinx.android.parcel.Parcelize
 @Entity(tableName = "user_table")
 data class User(
     @PrimaryKey(autoGenerate = true)
-    val id : Int,
-    val firstName:String,
-    val lastName:String,
-    val age:Int
+    val id: Int,
+    val firstName: String,
+    val lastName: String,
+    val age: Int
 ):Parcelable
