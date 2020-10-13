@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".data.fragment.add.addFragment">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <EditText
+        android:id="@+id/editTextPersonFirstName"
+        android:hint="Enter the First Name"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+
+    <EditText
+        android:id="@+id/editTextPersonLastName"
+        android:hint="Enter the Last Name"
+        android:layout_below="@id/editTextPersonFirstName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <EditText
+        android:id="@+id/editTextPersonAge"
+        android:hint="Enter the Age"
+        android:layout_below="@id/editTextPersonLastName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_marginLeft="150sp"
+        android:layout_below="@id/editTextPersonAge"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD" />
+    </RelativeLayout>
+</LinearLayout>

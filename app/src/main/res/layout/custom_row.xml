@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/row_layout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:layout_margin="16sp">
+
+        <TextView
+            android:id="@+id/sno_text"
+            android:textSize="17sp"
+            android:text="1"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10sp"/>
+
+        <TextView
+            android:id="@+id/firstName_text"
+            android:textSize="17sp"
+            android:text="First Name"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10sp"/>
+
+        <TextView
+            android:id="@+id/lastName_text"
+            android:textSize="17sp"
+            android:text="Last Name"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10sp"/>
+
+        <TextView
+            android:id="@+id/age_text"
+            android:textSize="17sp"
+            android:text="Age"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
